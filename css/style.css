@@ -1,0 +1,11 @@
+*{
+    transition: all 0.3s;
+}
+
+.albums .card:hover{
+    outline: 4px solid violet;
+}
+
+.albums a{
+    color: grey;
+}

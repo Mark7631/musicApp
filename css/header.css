@@ -1,0 +1,38 @@
+header{
+    background: linear-gradient(270deg, rgb(125, 16, 125), rgb(237, 123, 255));
+}
+
+input[type="search"]{
+    border: none;
+}
+
+.logo-text{
+    font-size: 24px;
+    font-weight: 100;
+    font-style: italic;
+} 
+
+header .nav-link{
+    color :white;
+    border-radius: 10px;
+}
+
+header .nav-link:hover{
+    background: linear-gradient(45deg, violet, blue);
+    color :white;
+    border-radius: 10px;
+}
+
+header .nav-link:active{
+    background: linear-gradient(45deg, grey, blue);
+    color :white;
+    border-radius: 10px;
+}
+
+.plus-badge{
+    font-size: 20px;
+    font-weight: 500;
+    font-style: italic;
+    padding: 10px 10px;
+    background: linear-gradient(90deg, brown, blue);
+}
