@@ -4,6 +4,7 @@ header{
 
 input[type="search"]{
     border: none;
+    border-bottom: 4px solid #000;
 }
 
 .logo-text{
@@ -13,8 +14,11 @@ input[type="search"]{
 } 
 
 header .nav-link{
+    margin: 10px;
     color :white;
     border-radius: 10px;
+    border: 1px solid #000;
+    border-bottom: 4px solid #000;
 }
 
 header .nav-link:hover{
@@ -35,4 +39,5 @@ header .nav-link:active{
     font-style: italic;
     padding: 10px 10px;
     background: linear-gradient(90deg, brown, blue);
+    border-bottom: 4px solid #000;
 }

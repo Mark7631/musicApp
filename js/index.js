@@ -4,7 +4,7 @@ let container = document.querySelector(`.albums`)
 
 for(let i = 0; i <albums.length; i++) {
     let album = albums[i];
-    container.innerHTML += `<div class="col-3"><a href="album.html?i=${i}" class="text-decoration-none">
+    container.innerHTML += `<div class="col-6 col-lg-3"><a href="album.html?i=${i}" class="text-decoration-none">
     <div class="card">
     <img src="${album.img}" alt="обложка для песни" class="card-image-top">
     <div class="card-body">
