@@ -1,4 +1,6 @@
+//массив объектов для вывода треков и информации о них
 let albums = [
+    //треки первого альбома
     {
         title: `Pirokinesis`,
         img: `assets/1.jpg`,
@@ -35,6 +37,7 @@ let albums = [
         },
         ],
     },
+    //треки второго альбома
     {
         title: `О любви`,
         img: `assets/2.jpg`,
@@ -64,6 +67,7 @@ let albums = [
         },
         ],
     },
+    //треки третьего альбома
     {
         title: `Fizica`,
         img: `assets/3.jpg`,
@@ -93,6 +97,7 @@ let albums = [
         },
         ],
     },
+    //треки четвёртого альбома
     {
         title: `Дедлайн`,
         img: `assets/4.jpg`,

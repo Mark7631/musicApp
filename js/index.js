@@ -1,7 +1,8 @@
-let container = document.querySelector(`.albums`)
+// обьявляем контейнер для альбоиов
+let container = document.querySelector(`.albums`);
 
 
-
+//с помощью цикла выводим альбоиы
 for(let i = 0; i <albums.length; i++) {
     let album = albums[i];
     container.innerHTML += `<div class="col-6 col-lg-3"><a href="album.html?i=${i}" class="text-decoration-none">
@@ -14,4 +15,4 @@ for(let i = 0; i <albums.length; i++) {
     </div>
     </div>
 </a></div>`;
-}
+};

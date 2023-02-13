@@ -1,16 +1,22 @@
+// контейнер для информации о альбоме и его треков
 let container = document.querySelector(`.album`);
 
+//находим строку запроса
 let search = new URLSearchParams(window.location.search);
 
+//находим номер альбома
 let i = search.get(`i`);
 
+//функция получения массива альбомов
 function getAlbum() {
     return albums[i]
 };
 
+
+//отдельный альбом из массива
 let album = getAlbum();
 
-
+//проверка на существование альбома => если не ошибка
 if(!album) {
     rendorError();
 }else{
@@ -21,7 +27,7 @@ if(!album) {
     setupAudio();
 };
 
-
+//функция вывода ошибок
 function rendorError() {
     container.innerHTML = `ERROR`
     setTimeout(() => {
@@ -29,6 +35,7 @@ function rendorError() {
     }, 5000);
 };
 
+//функция вывода информации о альбоме
 function rendorAlbumInfo() {
     container.innerHTML = `
     <div class="card mb-3">
@@ -48,6 +55,8 @@ function rendorAlbumInfo() {
     `;
 };
 
+
+//функция вывода треков
 function renderTracks() {
     let playlist = document.querySelector(`.playlist`);
 
@@ -68,17 +77,21 @@ function renderTracks() {
     };
 };
 
+
+//функция добавления музыки
 function setupAudio() {
-    // Найди коллекцию с треками
+    // Находим коллекцию с треками
     let trackNodes = document.querySelectorAll(`.track`); 
     for (let i = 0; i < trackNodes.length; i++) { 
         // Один элемент
         let tracks = album.tracks;
         let track = tracks[i];
         let node = trackNodes[i]; 
+        //переменная времени
         let timeNode = node.querySelector(`.time`);
         let imgPause = node.querySelector(`.img-pause`);
         let imgPlay = node.querySelector(`.img-play`);
+        //для прогресс бара
         let progressBar = node.querySelector(`.progress`);
         // Тег аудио внутри этого элемента
         let audio = node.querySelector(`.audio`); 
@@ -102,6 +115,7 @@ function setupAudio() {
                 updateProgress()
             }
         });
+        //функция  progress-bar
         function updateProgress() {
             // Нарисовать актуальное время
             let time = getTime(audio.currentTime);
@@ -118,6 +132,7 @@ function setupAudio() {
     };
 };
 
+//функция получения времени
 function getTime(time){
     let currentSeconds = Math.floor(time);
     let minutes = Math.floor(currentSeconds/60);
