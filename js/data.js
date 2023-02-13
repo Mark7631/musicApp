@@ -56,7 +56,7 @@ let albums = [
             isPlaying: false,
         },
         {
-            title: `Днвочка петербурга`,
+            title: `Девочка Петербурга`,
             author: `Monrau`,
             time: `3:41`,
             src:`music/Девочка_петербурга.mp3`,

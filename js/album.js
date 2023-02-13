@@ -54,15 +54,15 @@ function renderTracks() {
     let tracks = album.tracks;
     for(j = 0; j < tracks.length; j++) {
         let track = tracks[j];
-        playlist.innerHTML += `<li class="track list-group-item d-flex align-items-center">
-        <img class="img-pause me-3" src="assets/icons8-пластинка-16.png" alt="" class="me-3" height="30px">
-        <img class="img-play me-3 d-none" src="assets/icons8-аудио-волна-16.png" alt="" class="me-3" height="30px">
-        <div>
+        playlist.innerHTML += `<li class="track list-group-item d-flex align-items-center row">
+        <img class="img-pause me-3 col-auto" src="assets/icons8-пластинка-16.png" alt="" class="me-3" height="30px">
+        <img class="img-play me-3 d-none col-auto" src="assets/icons8-аудио-волна-16.png" alt="" class="me-3" height="30px">
+        <div col-4>
             <div>${track.title}</div>
             <div class="text-secondory">${track.author}</div>
         </div>
-        <div class="progress" role="progressbar" style="width: 0%;"></div>
-        <div class="ms-auto time">${track.time}</div>
+        <div class="progress col-6" role="progressbar" style="width: 0%;"></div>
+        <div class="ms-auto time col-2">${track.time}</div>
         <audio class="audio" src="${track.src}"><audio>
     </li>`;
     };
